@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="bg">
   <div class="titulo"><h3>Inicio Sesion</h3></div>
   <div class="Contenido">
     <ion-item>
@@ -18,8 +18,8 @@
       <ion-input></ion-input>
     </ion-item>
     <div class="botones">
-      <ion-button color="primary" routerLink="/inicio">Iniciar Sesion</ion-button>
-      <ion-button color="warning" routerLink="/recuperar-pass">Recuperar Contraseña</ion-button>
+      <ion-button expand="block" color="success" routerLink="/inicio">Iniciar Sesion</ion-button>
+      <ion-button expand="block" color="warning" routerLink="/recuperar-pass">Recuperar Contraseña</ion-button>
     </div>
   </div>
 </ion-content>
