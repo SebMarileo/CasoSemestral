@@ -6,7 +6,11 @@
 
 <ion-content class="bg">
   <div class="bienvenido">
-    <label><h3>Bienvenido {{Usuario}}</h3></label>
+    <ion-item *ngFor="let losusuarios of usuario">
+      <ion-label>
+        <h4>Bienvenido {{losusuarios.eluser}}</h4>
+      </ion-label>
+    </ion-item>
   </div>
   <div class="codigoQR">
     <ion-button color="danger">Generar Codigo QR</ion-button>
