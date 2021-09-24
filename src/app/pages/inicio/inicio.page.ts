@@ -1,32 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-
-  constructor() { }
+  qrData = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley";
+  elementType: 'url' | 'img' | 'canvas' = 'canvas'
+  constructor(private barcodeScanner: BarcodeScanner) { }
 
   ngOnInit() {
   }
 
-  usuario:any;
+  usuario: any;
 
-  lista(){
+  lista() {
     var datos = localStorage.getItem('Usuarios');
-    datos = datos.replace('[','');
-    datos = datos.replace(']','');
+    datos = datos.replace('[', '');
+    datos = datos.replace(']', '');
     datos = datos.split('},{').join('};{');
     //alert(datos)
     var arreglo_temp = datos.split(";");
     var use;
     var lista_temporal = new Array();
-    for (let index = 0; index < arreglo_temp.length; index++){
+    for (let index = 0; index < arreglo_temp.length; index++) {
       var registro = arreglo_temp[index];
       var el_user = JSON.parse(registro);
-      use={
+      use = {
         user: el_user.user
       }
       lista_temporal.push(use);

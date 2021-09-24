@@ -6,13 +6,14 @@
 
 <ion-content class="bg">
   <div class="bienvenido">
-    <ion-item *ngFor="let losusuarios of usuario">
-      <ion-label>
-        <h4>Bienvenido {{losusuarios.eluser}}</h4>
-      </ion-label>
-    </ion-item>
+    <h1>Bienvenido</h1>
+    <ion-card *ngIf="qrData">
+      <ngx-qrcode [elementType]='elementType' [value]="qrData"></ngx-qrcode>
+      <!--<ion-input type="text" placeholder="ingrese direccion" [(ngModel)]="qrData"></ion-input>-->
+    </ion-card>
   </div>
-  <div class="codigoQR">
-    <ion-button color="danger">Generar Codigo QR</ion-button>
+
+  <div class="volver">
+    <ion-button expand="block" color="success" routerLink="/home">Inicio</ion-button>
   </div>
 </ion-content>
