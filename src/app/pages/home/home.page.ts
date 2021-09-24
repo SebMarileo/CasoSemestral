@@ -5,6 +5,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  
 })
 export class HomePage {
 
@@ -23,6 +24,6 @@ export class HomePage {
     this.lista_user.push(this.usuario);
     var datos = this.lista_user;
     localStorage.setItem('Usuarios',JSON.stringify(datos));
-    alert('grabo')
+    //alert('grabo')
   }
 }

@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { AppModuleModule } from 'src/app/app-module.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     FormsModule,
     IonicModule,
     ReactiveFormsModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    AppModuleModule
   ],
   declarations: [HomePage]
 })

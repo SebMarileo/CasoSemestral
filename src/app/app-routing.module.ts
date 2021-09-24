@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'animacion',
+    loadChildren: () => import('./pages/animacion/animacion.module').then( m => m.AnimacionPageModule)
+  },
 ];
 
 @NgModule({

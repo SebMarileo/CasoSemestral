@@ -19,7 +19,7 @@ export class InicioPage implements OnInit {
     datos = datos.replace('[','');
     datos = datos.replace(']','');
     datos = datos.split('},{').join('};{');
-    //alert(datos);
+    //alert(datos)
     var arreglo_temp = datos.split(";");
     var use;
     var lista_temporal = new Array();
