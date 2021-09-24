@@ -6,7 +6,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  qrData = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley";
+  qrData = "https://ionicframework.com/docs/components";
   elementType: 'url' | 'img' | 'canvas' = 'canvas'
   constructor(private barcodeScanner: BarcodeScanner) { }
 
