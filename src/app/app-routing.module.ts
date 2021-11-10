@@ -26,7 +26,15 @@ const routes: Routes = [
   {
     path: 'animacion',
     loadChildren: () => import('./pages/animacion/animacion.module').then( m => m.AnimacionPageModule)
+  },  {
+    path: 'alumno',
+    loadChildren: () => import('./pages/alumno/alumno.module').then( m => m.AlumnoPageModule)
   },
+  {
+    path: 'inicio-sesion-alumno',
+    loadChildren: () => import('./pages/inicio-sesion-alumno/inicio-sesion-alumno.module').then( m => m.InicioSesionAlumnoPageModule)
+  },
+
 ];
 
 @NgModule({
